@@ -51,6 +51,15 @@ def input_temperature():
         except ValueError as error:
             print(f"Ошибка! {error}")
 
+def input_texture():
+    while True:
+        rgb = input("Введите цвет XXX, XXX, XXX: ")
+        try:
+            return validate_texture(rgb)
+        except ValueError as error:
+            print(f"Ошибка! {error}")
+
+
 
 def input_patient():
     return Patient(
@@ -58,5 +67,7 @@ def input_patient():
         name=input_name(),
         birth_date=input_date(),
         phone=input_phone(),
-        temperature=input_temperature()
+        temperature=input_temperature(),
+        texture=input_texture()
+
     )
