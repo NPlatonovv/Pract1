@@ -7,9 +7,16 @@ class Date:
     yyyy: int
 
 @dataclass
+class RGB:
+    R: int
+    G: int
+    B: int
+
+@dataclass
 class Patient:
     passport: str
     name: str
     birth_date: Date
     phone:  str
     temperature: float
+    texture : RGB
